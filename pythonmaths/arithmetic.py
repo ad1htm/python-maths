@@ -52,8 +52,17 @@ def divide(x: int | float, y: int | float) -> float:
     >>> arithmetic.divide(5, 2)
         2.5
     """
-    return x / y
+    try:
+        return x / y
+    except ZeroDivisionError as e:
+        raise ZeroDivisionError(
+        "You can not divide by 0, please choose another value for 'y'."
+    ) from e
 
+def test_divide_zero_division_exception() -> None:
+    """Test that a ZeroDivisionError is raised by the divide() function."""
+    with pytest.raises(ZeroDivisionError):
+        arithmetic.divide(2, 0)
 
 def multiply(x: int | float, y: int | float) -> float:
     """
