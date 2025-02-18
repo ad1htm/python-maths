@@ -128,6 +128,10 @@
         2.0
     >>> arithmetic.square_root(169)
         13.0
+    >>> arithmetic.divide(3, 0)
+        You can not divide by 0, please choose another value for 'y'.
+ >>> arithmetic.divide(1, 0.1)
+        10
     """
     return x ** (1 / 2)
     
