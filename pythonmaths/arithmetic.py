@@ -1,7 +1,7 @@
 """Functions for basic arithmetic."""
 
 
-def add(x: int | float, y: int | float) -> float:
+    def add(x: int | float, y: int | float) -> float:
     """
     Add two numbers together.
 
@@ -28,7 +28,7 @@ def add(x: int | float, y: int | float) -> float:
     return x + y
 
 
-def divide(x: int | float, y: int | float) -> float:
+    def divide(x: int | float, y: int | float) -> float:
     """
     Divide x by y.
 
@@ -64,7 +64,7 @@ def test_divide_zero_division_exception() -> None:
     with pytest.raises(ZeroDivisionError):
         arithmetic.divide(2, 0)
 
-def multiply(x: int | float, y: int | float) -> float:
+    def multiply(x: int | float, y: int | float) -> float:
     """
     Multiply x by y.
 
@@ -91,7 +91,7 @@ def multiply(x: int | float, y: int | float) -> float:
     return x * y
 
 
-def subtract(x: int | float, y: int | float) -> float:
+    def subtract(x: int | float, y: int | float) -> float:
     """
     Subtract y from x.
 
@@ -116,3 +116,28 @@ def subtract(x: int | float, y: int | float) -> float:
         2.5
     """
     return x - y
+    
+    def square_root(x):
+    """Return the square root of a number.
+
+    Parameters
+    ==========
+    x : int | float
+        The number for which you wish to find the square root.
+
+    Returns
+    =======
+    float
+        The square root of x.
+
+    Examples
+    ========
+    >>> from python_math import arithmetic
+    >>> arithmetic.square_root(4)
+        2.0
+    >>> arithmetic.square_root(169)
+        13.0
+    """
+    return x ** (1 / 2)
+    
+
